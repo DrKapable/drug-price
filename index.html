@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruth Kaluluma Memorial - Drug Prices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Ruth Kaluluma Memorial Medical Centre</h1>
+        <h2>Stock Management System</h2>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search drug name or category...">
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <div class="results-container">
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Drug Name</th>
+                    <th>Price (ZMW)</th>
+                    <th>Category</th>
+                    <th>In Stock</th>
+                    <th>Dispense Qty</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody">
+                <!-- Results will appear here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="dispense-summary" id="dispenseSummary">
+        <h3>Dispensing Summary</h3>
+        <div id="summaryContent"></div>
+        <button id="confirmDispense" class="dispense-btn">Confirm Dispense</button>
+        <button id="cancelDispense" class="dispense-btn cancel">Cancel</button>
+    </div>
+
+    <div class="footer">
+        <p id="status">Ready to search</p>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Dispensing Summary Modal -->
+<div id="dispenseSummary" class="modal">
+  <div class="modal-content">
+    <h3>Dispensing Summary</h3>
+    <div id="summaryContent"></div>
+    <div class="modal-actions">
+      <button id="confirmDispense">Confirm Dispense</button>
+      <button id="cancelDispense">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- Background overlay (hidden by default) -->
+<div id="modalOverlay" class="modal-overlay"></div>
+</body>
+</html>

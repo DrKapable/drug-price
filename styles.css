@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EAE2E1; /* Background color */
+}
+
+.header {
+    background-color: #BB4940; /* Primary color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header h2 {
+    margin: 5px 0 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.search-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #EAE2E1; /* Background color */
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid #424884; /* Tertiary color */
+    border-radius: 4px;
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    background-color: #3DAEDF; /* Secondary color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#searchBtn:hover {
+    background-color: #2D8EBD; /* Darker shade of secondary */
+}
+
+.results-container {
+    margin: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #424884; /* Tertiary color */
+    color: white;
+}
+
+tr:hover {
+    background-color: rgba(61, 174, 223, 0.1); /* Light tint of secondary */
+}
+
+.footer {
+    background-color: #BB4940; /* Primary color */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#status {
+    margin: 0;
+}
+
+/* Autocomplete styles */
+#autocomplete-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    border: 1px solid #424884; /* Tertiary color */
+}
+
+#autocomplete-list li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #EAE2E1; /* Background color */
+}
+
+#autocomplete-list li:hover {
+    background-color: #3DAEDF; /* Secondary color */
+    color: white;
+}
+
+.search-container {
+    position: relative;
+}
+
+/* Additional color consistency */
+#searchInput:focus {
+    outline: 2px solid #3DAEDF; /* Secondary color */
+    border-color: #3DAEDF;
+}
+/* Add these styles to your existing CSS */
+th:nth-child(5), th:nth-child(6),
+td:nth-child(5), td:nth-child(6) {
+    text-align: center;
+}
+
+.dispense-qty {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #424884; /* Tertiary color */
+    border-radius: 4px;
+}
+
+.dispense-btn {
+    padding: 8px 15px;
+    background-color: #3DAEDF; /* Secondary color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dispense-btn:hover {
+    background-color: #2D8EBD; /* Darker shade of secondary */
+}
+
+.dispense-btn.cancel {
+    background-color: #BB4940; /* Primary color */
+}
+
+.dispense-btn.cancel:hover {
+    background-color: #9A3930;
+}
+
+.dispense-summary {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+    max-width: 500px;
+    width: 90%;
+}
+
+.dispense-summary h3 {
+    margin-top: 0;
+    color: #424884; /* Tertiary color */
+    border-bottom: 1px solid #EAE2E1; /* Background color */
+    padding-bottom: 10px;
+}
+
+#summaryContent {
+    margin: 15px 0;
+}
+
+.dispense-summary-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+/* Existing styles remain unchanged... */
+
+/* Load More button */
+#loadMoreBtn {
+    padding: 10px 20px;
+    background-color: #424884; /* Tertiary color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#loadMoreBtn:hover {
+    background-color: #2F3469; /* Slightly darker tertiary shade */
+}
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 80%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* Dispense button styling */
+.dispense-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dispense-btn:hover {
+  background: #45a049;
+}
+
+.dispense-qty {
+  width: 60px;
+  padding: 5px;
+}
